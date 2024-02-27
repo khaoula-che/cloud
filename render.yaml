@@ -1,0 +1,6 @@
+services:
+    type: web
+    name: esgi-2i1
+    runtime: node 
+    region: frankfurk
+    plan: free
