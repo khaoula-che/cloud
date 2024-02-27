@@ -2,12 +2,12 @@ const { Sequelize } = require('sequelize')
 
 // database
 const sequelize = new Sequelize(
-  //process.env.DB_URL,
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+    process.env.DBCONNECTIONSTRING,
+  //process.env.DB_NAME, // Database name
+  //process.env.DB_USER, // User
+  //process.env.DB_PASS, // Password
   {
-    host: process.env.DB_HOST, 
+   // host: process.env.DB_HOST, // Host
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
