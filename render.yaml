@@ -1,16 +1,21 @@
 services:
+  # A Node.js web service
   - type: web
-    name: esgi-2i1
-    runtime: node 
-    region: frankfurt
+    name: nodeJsTestRender
     plan: free
+    runtime: node
+    repo: https://github.com/Sitron808/CloudTest
+    region: frankfurt
     branch: main
     buildCommand: npm install
-    startCommand: npm run start 
+    startCommand: npm run start
     envVars:
-      - key: DB_CONNECTION_STRING
-        fromDatabase: esgi-2i1-db
-        property: connectionString
+      - key: DBCONNECTIONSTRING
+        fromDatabase:
+          name: nodeJsTestRender-db
+          property: connectionString
+
 databases:
-  - name: esgi-2i1-db
+  - name: nodeJsTestRender-db
     region: frankfurt
+    plan: free
