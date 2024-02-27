@@ -9,7 +9,7 @@ services:
     startCommand: npm run start 
     envVars:
       - key: DB_CONNECTION_STRING
-        fronDatabase: esgi-2i1-db
+        fromDatabase: esgi-2i1-db
         property: connectionString
 databases:
   - name: esgi-2i1-db
