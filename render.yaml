@@ -4,7 +4,6 @@ services:
     name: nodeJsTestRender
     plan: free
     runtime: node
-    repo: https://github.com/Sitron808/CloudTest
     region: frankfurt
     branch: main
     buildCommand: npm install
