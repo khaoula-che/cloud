@@ -1,15 +1,16 @@
 services:
   - type: web
     name: esgi-2i1
-    runtime: node
+    runtime: node 
     region: frankfurt
     plan: free
     branch: main
     buildCommand: npm install
-    startCommand: npm run start
+    startCommand: npm run start 
     envVars:
       - key: DB_CONNECTION_STRING
-        value: "esgi-2i1-db" # Replace with actual connection string
+        fromDatabase: esgi-2i1-db
+        property: connectionString
 databases:
   - name: esgi-2i1-db
     region: frankfurt
