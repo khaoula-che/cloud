@@ -1,6 +1,16 @@
 services:
-    type: web
+  - type: web
     name: esgi-2i1
     runtime: node 
-    region: frankfurk
+    region: frankfurt
     plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm run start 
+    envVars:
+      - key: DB_CONNEXION_STRING
+        fronDatabase: esgi-2i1-db
+        property: connectionString
+databases:
+  - name: esgi-2i1-db
+    region: frankfurt
