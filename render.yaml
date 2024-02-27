@@ -9,9 +9,7 @@ services:
     startCommand: npm run start
     envVars:
       - key: DB_CONNECTION_STRING
-        valueFrom: # This might need to be adjusted based on the exact syntax required
-          database: esgi-2i1-db
-          property: connectionString
+        value: "esgi-2i1-db" # Replace with actual connection string
 databases:
   - name: esgi-2i1-db
     region: frankfurt
